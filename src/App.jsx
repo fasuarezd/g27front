@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Dashboard from './pages/Dashboard'
-import Register from './pages/Register'
 import Login from './pages/Login'
-import Header from './components/Header'
+import Register from './pages/Register'
 
 function App() {
 

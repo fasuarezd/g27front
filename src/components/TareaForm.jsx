@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { crearTarea } from '../features/tareas/tareaSlice'
+import { TbSettingsExclamation } from 'react-icons/tb'
 
 const TareaForm = () => {
 
-    const [descripcion, setDescripcion] = useState('')
+    const [texto, setTexto] = useState('')
 
     const dispatch = useDispatch()
 
     const onSubmit = (e) => {
         e.preventDefault()
 
-        dispatch(crearTarea({ descripcion }))
-        setDescripcion('')
+        dispatch(crearTarea({ texto }))
+        setTexto('')
     }
 
     return (
@@ -23,10 +24,10 @@ const TareaForm = () => {
                         <label htmlFor="descripcion">Descripción:</label>
                         <input
                             type="text"
-                            name="descripcion"
-                            id="descripcion"
-                            value={descripcion}
-                            onChange={(e) => setDescripcion(e.target.value)}
+                            name="texto"
+                            id="texto"
+                            value={texto}
+                            onChange={(e) => setTexto(e.target.value)}
                         />
                     </div>
                     <div className="form-group">

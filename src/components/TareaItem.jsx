@@ -10,7 +10,7 @@ const TareaItem = ({ tarea }) => {
             <div>
                 {new Date(tarea.createdAt).toLocaleString('es-MX')}
             </div>
-            <h3>{tarea.descripcion}</h3>
+            <h3>{tarea.texto}</h3>
             <button onClick={() => dispatch(deleteTarea(tarea._id))} className='close'>X</button>
         </div>
     )
